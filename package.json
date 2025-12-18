@@ -1,0 +1,47 @@
+{
+  "name": "webarcade",
+  "version": "0.1.4",
+  "type": "module",
+  "description": "High-speed development framework for web and desktop applications with SolidJS",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/aspect-/webarcade"
+  },
+  "keywords": [
+    "webarcade",
+    "solidjs",
+    "desktop",
+    "framework",
+    "plugin",
+    "webview"
+  ],
+  "main": "./src/index.js",
+  "module": "./src/index.js",
+  "exports": {
+    ".": "./src/index.js",
+    "./plugin": "./src/api/plugin/index.jsx",
+    "./layout": "./src/api/layout/index.jsx",
+    "./components": "./src/components/index.jsx",
+    "./components/ui": "./src/components/ui/index.jsx",
+    "./components/layout": "./src/components/layout/index.jsx",
+    "./hooks": "./src/api/plugin/hooks.jsx",
+    "./bridge": "./src/api/plugin/bridge.js",
+    "./app": "./src/app/entry-client.jsx",
+    "./app/entry": "./src/app/entry-client.jsx",
+    "./app/App": "./src/app/App.jsx",
+    "./app/base.css": "./src/app/base.css",
+    "./app/index.css": "./src/app/index.css",
+    "./app/index.html": "./src/app/index.html"
+  },
+  "files": [
+    "src"
+  ],
+  "peerDependencies": {
+    "solid-js": "^1.9.0"
+  },
+  "dependencies": {
+    "@tabler/icons-solidjs": "^3.34.1",
+    "daisyui": "^5.0.0"
+  }
+}
