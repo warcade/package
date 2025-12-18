@@ -24,25 +24,25 @@ createRoot(() => {
  *
  * @example
  * // Register layouts
- * layoutManager.register('engine', {
+ * layout.register('engine', {
  *     name: 'Engine',
  *     component: EngineLayout,
  *     icon: IconEngine
  * });
  *
- * layoutManager.register('material-editor', {
+ * layout.register('material-editor', {
  *     name: 'Material Editor',
  *     component: MaterialEditorLayout,
  *     icon: IconPalette
  * });
  *
  * // Switch layouts
- * layoutManager.setActive('material-editor');
+ * layout.setActive('material-editor');
  *
  * // Go back to previous layout
- * layoutManager.back();
+ * layout.back();
  */
-export const layoutManager = {
+export const layout = {
     /**
      * Register a layout
      * @param {string} id - Unique layout ID
@@ -202,4 +202,4 @@ export const layoutManager = {
 // Export signals for reactive access
 export { layouts, activeLayoutId, layoutHistory };
 
-export default layoutManager;
+export default layout;

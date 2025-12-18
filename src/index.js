@@ -5,8 +5,8 @@
 export * from './api/plugin/index.jsx';
 
 // Layout System
-export * from './api/layout/index.jsx';
-export { LayoutRenderer } from './api/layout/LayoutRenderer.jsx';
+export * from './layout/index.jsx';
+export { LayoutRenderer } from './layout/LayoutRenderer.jsx';
 
 // Hooks
 export * from './api/plugin/hooks.jsx';

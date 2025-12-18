@@ -3,7 +3,7 @@ import * as SolidJS from 'solid-js'
 import * as SolidJSWeb from 'solid-js/web'
 import * as SolidJSStore from 'solid-js/store'
 import * as WebArcade from '../index'
-import * as WebArcadeUI from '../components/ui'
+import * as WebArcadeUI from '../ui'
 import App from './App'
 
 // Expose SolidJS globally for runtime plugins

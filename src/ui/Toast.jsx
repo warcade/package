@@ -6,7 +6,7 @@ import { Portal } from 'solid-js/web';
  *
  * @example
  * // Use the toast function
- * import { toast } from '@/components/ui';
+ * import { toast } from 'webarcade/ui';
  *
  * toast('Hello!');
  * toast.success('Saved!');

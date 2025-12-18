@@ -1,6 +1,6 @@
 {
   "name": "webarcade",
-  "version": "0.1.4",
+  "version": "0.1.5",
   "type": "module",
   "description": "High-speed development framework for web and desktop applications with SolidJS",
   "license": "MIT",
@@ -21,10 +21,9 @@
   "exports": {
     ".": "./src/index.js",
     "./plugin": "./src/api/plugin/index.jsx",
-    "./layout": "./src/api/layout/index.jsx",
+    "./layout": "./src/layout/index.jsx",
     "./components": "./src/components/index.jsx",
-    "./components/ui": "./src/components/ui/index.jsx",
-    "./components/layout": "./src/components/layout/index.jsx",
+    "./ui": "./src/ui/index.jsx",
     "./hooks": "./src/api/plugin/hooks.jsx",
     "./bridge": "./src/api/plugin/bridge.js",
     "./app": "./src/app/entry-client.jsx",

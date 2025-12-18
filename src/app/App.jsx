@@ -1,7 +1,7 @@
 import { onMount } from 'solid-js';
 import './base.css';
 import { Engine } from '../api/plugin';
-import { LayoutRenderer } from '../api/layout/LayoutRenderer';
+import { LayoutRenderer } from '../layout/LayoutRenderer';
 import DevNotice from '../components/DevNotice';
 import PluginInstaller from '../components/PluginInstaller';
 

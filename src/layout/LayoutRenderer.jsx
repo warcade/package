@@ -1,6 +1,6 @@
 import { Show, createMemo } from 'solid-js';
 import { Dynamic } from 'solid-js/web';
-import { layoutManager, activeLayoutId, layouts } from './index';
+import { layout, activeLayoutId, layouts } from './index';
 
 /**
  * Renders the currently active layout
@@ -32,7 +32,7 @@ export function LayoutRenderer(props) {
                     <div class="text-center">
                         <h2 class="text-xl font-bold mb-2">No Layout Registered</h2>
                         <p class="text-base-content/60">
-                            Register a layout using layoutManager.register()
+                            Register a layout using layout.register()
                         </p>
                     </div>
                 </div>

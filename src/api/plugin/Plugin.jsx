@@ -1,6 +1,6 @@
 import { componentRegistry, ComponentType } from './registry';
 import { bridge } from './bridge';
-import { layoutManager } from '../layout';
+import { layout as layoutManager } from '../../layout';
 import { VERSION, VERSION_NAME, VERSION_FULL } from '../../version';
 
 /**

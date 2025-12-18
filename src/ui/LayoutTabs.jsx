@@ -1,5 +1,5 @@
 import { For, Show, createSignal } from 'solid-js';
-import { layoutManager, activeLayoutId } from '../../api/layout';
+import { layout, activeLayoutId } from '../layout';
 import { IconPlus, IconX } from '@tabler/icons-solidjs';
 
 /**
@@ -11,11 +11,11 @@ import { IconPlus, IconX } from '@tabler/icons-solidjs';
  * <LayoutTabs closable={true} onClose={(id) => removeLayout(id)} />
  */
 export function LayoutTabs(props) {
-    const layouts = () => layoutManager.getAll();
+    const layouts = () => layout.getAll();
     const currentId = activeLayoutId;
 
     const handleSwitch = (id) => {
-        layoutManager.setActive(id);
+        layout.setActive(id);
     };
 
     return (

@@ -3,7 +3,7 @@
  * Single source of truth for version information
  */
 
-export const VERSION = '0.1.4';
+export const VERSION = '0.1.5';
 export const VERSION_NAME = 'WebArcade';
 export const VERSION_FULL = `${VERSION_NAME} v${VERSION}`;
 
