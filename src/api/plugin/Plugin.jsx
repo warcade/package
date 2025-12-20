@@ -1,6 +1,7 @@
 import { componentRegistry, ComponentType } from './registry';
 import { bridge } from './bridge';
 import { layout as layoutManager } from '../../layout';
+import { windowManager } from '../window';
 import { VERSION, VERSION_NAME, VERSION_FULL } from '../../version';
 
 /**
@@ -144,6 +145,25 @@ export function plugin(config) {
                 fullscreen: (enabled = true) => engineAPI?.fullscreen?.(enabled),
                 hideAll: () => document.dispatchEvent(new CustomEvent('layout:hideAll')),
                 showAll: () => document.dispatchEvent(new CustomEvent('layout:showAll'))
+            },
+
+            // ==================== WINDOW MANAGEMENT ====================
+
+            /**
+             * Floating window API
+             * - window.open(componentId, options) - Open a component in a floating window
+             * - window.close(windowId) - Close a window
+             * - window.focus(windowId) - Bring a window to front
+             * - window.closeAll() - Close all windows opened by this plugin
+             * - window.getAll() - Get all open windows
+             */
+            window: {
+                open: (componentId, options = {}) => windowManager.open(`${id}:${componentId}`, options),
+                close: (windowId) => windowManager.close(windowId),
+                focus: (windowId) => windowManager.focus(windowId),
+                closeAll: () => windowManager.closeByPlugin(id),
+                getAll: () => windowManager.getAll().filter(w => w.componentId.startsWith(`${id}:`)),
+                isOpen: (windowId) => windowManager.isOpen(windowId)
             },
 
             // ==================== BRIDGE: SERVICES ====================

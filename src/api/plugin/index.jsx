@@ -419,6 +419,7 @@ export { createPlugin, plugin } from './Plugin.jsx';
 export { bridge, api, ws, BRIDGE_API, WEBARCADE_WS } from './bridge.js';
 export { componentRegistry, registry, contractIndex, ComponentType } from './registry.jsx';
 export { layout, layouts, activeLayoutId } from '../../layout';
+export { windowManager, windows } from '../window';
 export { PLUGIN_STATES } from './store.jsx';
 export { VERSION, VERSION_NAME, VERSION_FULL } from '../../version';
 

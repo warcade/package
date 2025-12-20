@@ -2,6 +2,7 @@ import { onMount } from 'solid-js';
 import './base.css';
 import { Engine } from '../api/plugin';
 import { LayoutRenderer } from '../layout/LayoutRenderer';
+import { WindowLayer } from '../layout/WindowLayer';
 import DevNotice from '../components/DevNotice';
 import PluginInstaller from '../components/PluginInstaller';
 
@@ -24,6 +25,7 @@ export default function App() {
             <PluginInstaller />
             <div class="w-full h-full relative">
                 <LayoutRenderer />
+                <WindowLayer />
                 <DevNotice />
             </div>
         </Engine>
