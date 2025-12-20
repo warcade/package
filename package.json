@@ -1,12 +1,13 @@
 {
   "name": "webarcade",
-  "version": "0.1.5",
+  "version": "0.1.9",
   "type": "module",
   "description": "High-speed development framework for web and desktop applications with SolidJS",
   "license": "MIT",
+  "homepage": "https://webarcade.io",
   "repository": {
     "type": "git",
-    "url": "https://github.com/aspect-/webarcade"
+    "url": "https://github.com/warcade/package"
   },
   "keywords": [
     "webarcade",
