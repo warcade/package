@@ -1,6 +1,6 @@
 {
   "name": "webarcade",
-  "version": "0.1.9",
+  "version": "0.3.0",
   "type": "module",
   "description": "High-speed development framework for web and desktop applications with SolidJS",
   "license": "MIT",
