@@ -14,6 +14,9 @@ export * from './api/plugin/hooks.jsx';
 // Components
 export * from './components/index.jsx';
 
+// UI Components
+export * from './ui/index.jsx';
+
 // App Components
 export { default as DevNotice } from './components/DevNotice.jsx';
 export { default as PluginInstaller } from './components/PluginInstaller.jsx';
