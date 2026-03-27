@@ -26,7 +26,7 @@ class PluginLoader {
         const plugins = [];
 
         try {
-            const response = await fetch(`http://localhost:3001/api/plugins/list?_=${Date.now()}`);
+            const response = await fetch(`http://app.localhost/api/plugins/list?_=${Date.now()}`);
 
             if (response.ok) {
                 const data = await response.json();
@@ -81,9 +81,20 @@ class PluginLoader {
 
     async loadPluginDynamic(id, path, mainFile) {
         const pluginId = path.replace('/runtime/', '');
-        const pluginUrl = `http://localhost:3001/api/plugins/${pluginId}/${mainFile}?_=${Date.now()}`;
-        const pluginModule = await import(/* webpackIgnore: true */ pluginUrl);
-        return pluginModule;
+        const pluginUrl = `http://app.localhost/api/plugins/${pluginId}/${mainFile}?_=${Date.now()}`;
+        const globalName = `__plugin_${pluginId.replace(/[^a-zA-Z0-9]/g, '_')}__`;
+        // Load IIFE plugin via <script> tag — avoids ESM import() issues with custom protocols
+        return new Promise((resolve, reject) => {
+            const script = document.createElement('script');
+            script.src = pluginUrl;
+            script.onload = () => {
+                const mod = window[globalName];
+                try { delete window[globalName]; } catch(e) { window[globalName] = undefined; }
+                resolve({ default: mod?.default || mod });
+            };
+            script.onerror = () => reject(new Error(`Failed to load plugin: ${pluginId}`));
+            document.head.appendChild(script);
+        });
     }
 
     async loadPlugin(pluginInfo) {

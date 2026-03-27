@@ -2,8 +2,8 @@ import { createSignal, createEffect, batch } from 'solid-js';
 import { createStore, produce, reconcile } from 'solid-js/store';
 
 // HTTP API Configuration
-export const BRIDGE_API = 'http://localhost:3001';
-export const WEBARCADE_WS = 'ws://localhost:3002';
+export const BRIDGE_API = 'http://app.localhost';
+export const WEBARCADE_WS = null; // No WebSocket needed — events go through IPC
 
 /**
  * HTTP API helper for backend communication

@@ -87,7 +87,7 @@ const PluginInstaller = () => {
       const base64 = btoa(String.fromCharCode(...bytes));
 
       // Call bridge API to install plugin
-      const response = await fetch('http://127.0.0.1:3001/api/plugins/install', {
+      const response = await fetch('http://app.localhost/api/plugins/install', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({

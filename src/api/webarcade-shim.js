@@ -206,7 +206,7 @@ export async function once(event, callback) {
 
 export async function invoke(cmd, args) {
     // For commands that need to go to the bridge server
-    const response = await fetch(`http://127.0.0.1:3001/api/${cmd}`, {
+    const response = await fetch(`http://app.localhost/api/${cmd}`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(args || {})
