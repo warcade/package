@@ -1,6 +1,6 @@
 import { splitProps, createSignal, createMemo, Show, For, onMount, onCleanup } from 'solid-js';
 import { Dynamic } from 'solid-js/web';
-import { componentRegistry, ComponentType } from '../../api/plugin/registry';
+import { componentRegistry, ComponentType } from '@/api/plugin/registry';
 
 /**
  * A slot renders assigned components as tabs

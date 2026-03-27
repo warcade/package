@@ -1,5 +1,5 @@
 import { splitProps, createMemo, createSignal, Show, For } from 'solid-js';
-import { componentRegistry, ComponentType } from '../../api/plugin/registry';
+import { componentRegistry, ComponentType } from '@/api/plugin/registry';
 import { IconMinus, IconSquare, IconX } from '@tabler/icons-solidjs';
 
 // Window control functions

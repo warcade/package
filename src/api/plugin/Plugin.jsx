@@ -1,8 +1,8 @@
 import { componentRegistry, ComponentType } from './registry';
 import { bridge } from './bridge';
-import { layout as layoutManager } from '../../layout';
+import { layout as layoutManager } from '@/layout';
 import { windowManager } from '../window';
-import { VERSION, VERSION_NAME, VERSION_FULL } from '../../version';
+import { VERSION, VERSION_NAME, VERSION_FULL } from '@/version';
 
 /**
  * Create a plugin with the new unified API

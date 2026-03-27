@@ -1,6 +1,6 @@
 import { splitProps, createMemo, Show, For } from 'solid-js';
 import { Dynamic } from 'solid-js/web';
-import { componentRegistry, ComponentType } from '../../api/plugin/registry';
+import { componentRegistry, ComponentType } from '@/api/plugin/registry';
 
 /**
  * Toolbar renders toolbar items from the registry

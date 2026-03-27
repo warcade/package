@@ -1,7 +1,7 @@
 import { splitProps, createMemo, For, Show } from 'solid-js';
 import { Dynamic } from 'solid-js/web';
-import { componentRegistry, ComponentType } from '../../api/plugin/registry';
-import { VERSION_FULL } from '../../version';
+import { componentRegistry, ComponentType } from '@/api/plugin/registry';
+import { VERSION_FULL } from '@/version';
 
 /**
  * Footer/status bar renders status items from the registry

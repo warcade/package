@@ -1,6 +1,6 @@
 import { splitProps, createMemo, For, Show } from 'solid-js';
 import { Dynamic } from 'solid-js/web';
-import { componentRegistry, ComponentType } from '../../api/plugin/registry';
+import { componentRegistry, ComponentType } from '@/api/plugin/registry';
 
 /**
  * TabBar renders tabs for a set of components

@@ -1,6 +1,6 @@
 import { For, Show, createMemo } from 'solid-js';
 import { Dynamic } from 'solid-js/web';
-import { componentRegistry } from '../../api/plugin/registry';
+import { componentRegistry } from '@/api/plugin/registry';
 
 /**
  * ActivityBar - Vertical icon menu (like VS Code's activity bar)
